@@ -1,4 +1,0 @@
-Line 1
-Another long line
-One more long line.
-Line with some symbols and number 1231251271268@124122
