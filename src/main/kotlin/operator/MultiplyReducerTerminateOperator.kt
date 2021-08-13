@@ -1,7 +1,5 @@
 package operator
 
-import java.lang.UnsupportedOperationException
-
 /**
  * Class that takes Int and produce Int.
  */

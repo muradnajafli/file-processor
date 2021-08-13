@@ -17,8 +17,8 @@ class FileProcessor(private val fileReader: FileReader) {
      * Method takes file, filter, mapper, transformer and terminate operator.
      * File should be first converted to sequence of String. Each string is equal to line of file
      * Each line of file should go through the following pipeline: filter -> mapper -> transformer.
-     * Than output sequence should be terminated by terminate operator.
-     * Use fileReader to to read file as sequence of lines.
+     * Then output sequence should be terminated by terminate operator.
+     * Use fileReader to read file as sequence of lines.
      * Method should accept any string filter, any mapper that takes string and produce another type,
      * any sequence transformer that input type match with mapper output type,
      * any terminate operator that input type match with transformer output type.
@@ -27,7 +27,7 @@ class FileProcessor(private val fileReader: FileReader) {
      * @param mapper any mapper that map String to another type. Mapping will be done for each filtered file line
      * @param transformer any transformer that will change mapped sequence to another sequence
      * @param terminateOperator any terminate operator that input type match with transformer output type.
-     * @return result of termiated operator.
+     * @return result of terminated operator.
      */
     fun process(
         file: File,
