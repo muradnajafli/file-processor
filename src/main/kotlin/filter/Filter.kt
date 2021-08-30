@@ -1,7 +1,7 @@
 package filter
 
 /**
- * Filter should have a possibility to take any type as argument.
+ * The filter should be able to take any type as an argument.
  */
 interface Filter {
     /**

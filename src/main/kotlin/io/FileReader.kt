@@ -7,9 +7,9 @@ import java.io.*
  */
 class FileReader {
     /**
-     * Read file line by line and transform it to sequence.
-     * Do not read full file content and transform it to sequence.
-     * In this case method will not be able to process to large files
+     * Read file line by line and transform it to the sequence.
+     * Do not read full file content and transform it to the sequence.
+     * In this case the method will not be able to process large files
      * @param file file that needs to be read line by line
      * @return sequence that consist of lines of file
      */

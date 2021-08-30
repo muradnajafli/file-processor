@@ -5,7 +5,7 @@ package transformer
  */
 class TakeNSequenceTransformer(private val numberToTake: Int): SequenceTransformer {
     /**
-     * Method that takes sequence and produce sequence that takes only numberToTake items from initial sequence.
+     * Method that takes a sequence and produces a sequence that takes only numberToTake items from an initial sequence.
      * @param source initial sequence
      * @return sequence with the same type as initial that contains only numberToTake items
      */

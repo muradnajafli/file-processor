@@ -7,9 +7,9 @@ class ChunkedSequenceTransformer(
     private val chunkSize: Int
 ) : SequenceTransformer {
     /**
-     * Takes sequence and produce chunked sequence of the same type. Chunk size is equal to chunkSize.
+     * Takes sequence and produces a chunked sequence of the same type. Chunk size is equal to chunkSize.
      * @param source initial sequence
-     * @return chunked sequence with the same type as input sequence
+     * @return chunked sequence with the same type as the input sequence
      */
     override fun transform(source: ) = TODO()
 }

@@ -1,7 +1,7 @@
 package operator
 
 /**
- * Class that takes String and produce Boolean.
+ * Class that takes String and produces Boolean.
  */
 class ParticularStringPredicateCheckTerminateOperator(
     private val stringToCheck: String

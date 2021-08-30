@@ -5,7 +5,7 @@ package transformer
  */
 class UniqueValueSequenceTransformer : SequenceTransformer {
     /**
-     * Method that takes sequence and produce sequence with unique values from initial sequence.
+     * Method that takes sequence and produces sequence with unique values from an initial sequence.
      * @param source initial sequence
      * @return sequence with unique values from initial sequence
      */

@@ -5,7 +5,7 @@ package operator
  */
 class PrintlnTerminateOperator : TerminateOperator {
     /**
-     * Method that terminate input sequence and println each value to console using println method
+     * Method that terminates input sequence and println each value to console using println method
      * @param param input sequence to terminate
      * @return Unit
      */
