@@ -39,22 +39,3 @@ class FileProcessor(private val fileReader: FileReader) {
             .let(terminateOperator::terminate)
     }
 }
-
-/**
- * Uncomment main function to check entire pipeline.
- * In case everything is implemented correctly and there is no changes in test_file.txt '6' will be printed to console.
- */
-/*
-fun main() {
-    val file = File("src/main/resources/test_file.txt")
-    val processor = FileProcessor(FileReader())
-    val result: Int = processor.process(
-        file = file,
-        filter = LineLengthFilter(12),
-        mapper = CharCountMapper(),
-        transformer = TakeNSequenceTransformer(5),
-        terminateOperator = SumTerminateOperator()
-    )
-    println(result) // With no changes in test file result should be equal to 6
-}
-*/
