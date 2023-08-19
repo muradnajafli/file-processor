@@ -1,12 +1,8 @@
 import filter.Filter
-import filter.LineLengthFilter
 import io.FileReader
-import mapper.CharCountMapper
 import mapper.Mapper
-import operator.SumTerminateOperator
 import transformer.SequenceTransformer
 import operator.TerminateOperator
-import transformer.TakeNSequenceTransformer
 import java.io.File
 
 /**
@@ -29,13 +25,19 @@ class FileProcessor(private val fileReader: FileReader) {
      * @param terminateOperator any terminate operator that input type match with transformer output type.
      * @return result of terminated operator.
      */
-    fun process(
+    fun <T, R, B>process(
         file: File,
-        filter: Filter,
-        mapper: Mapper,
-        transformer: SequenceTransformer,
-        terminateOperator: TerminateOperator
-    ) = TODO()
+        filter: Filter<String>,
+        mapper: Mapper<String, T>,
+        transformer: SequenceTransformer<T, R>,
+        terminateOperator: TerminateOperator<R, B>
+    ): B {
+        return fileReader.read(file)
+            .filter(filter::filter)
+            .map(mapper::map)
+            .let(transformer::transform)
+            .let(terminateOperator::terminate)
+    }
 }
 
 /**

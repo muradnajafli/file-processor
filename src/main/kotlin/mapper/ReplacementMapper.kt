@@ -6,11 +6,14 @@ package mapper
 class ReplacementMapper(
     private val substringToReplace: String,
     private val replacement: String
-) : Mapper {
+) : Mapper<String, String> {
     /**
      * Takes string as an input and produce string that replaces all occurrences of substringToReplace on replacement.
      * @param param input string
      * @return string that contains replacement instead of substringToReplace for all occurrences
      */
-    override fun map(param: ) = TODO()
+    override fun map(param: String): String {
+        return param.replace(substringToReplace, replacement)
+    }
+
 }

@@ -5,11 +5,13 @@ package operator
  */
 class ParticularStringPredicateCheckTerminateOperator(
     private val stringToCheck: String
-) : TerminateOperator {
+) : TerminateOperator<String, Boolean> {
     /**
      * Method that finds first item in sequence equal to stringToCheck property
      * @param param sequence to terminate
      * @return true if sequence contains item equal to stringToCheck property false otherwise
      */
-    override fun terminate(param: ) = TODO()
+    override fun terminate(param: Sequence<String>): Boolean {
+        return param.contains(stringToCheck)
+    }
 }
